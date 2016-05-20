@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  CollectionViewController.h
 //  CollectionViewCell-Animation
 //
-//  Created by Mac on 16/5/19.
+//  Created by Mac on 16/5/20.
 //  Copyright © 2016年 YinTokey. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CollectionViewController : UICollectionViewController
 
 @end
-

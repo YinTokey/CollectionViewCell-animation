@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401D5921CEEABE600D36DDD /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401D5911CEEABE600D36DDD /* CollectionViewController.m */; };
+		0401D5951CEEAD5500D36DDD /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401D5941CEEAD5500D36DDD /* Cell.m */; };
+		04028C951CEE461300A7383C /* YTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04028C941CEE461300A7383C /* YTAnimation.m */; };
 		044647BB1CEDA9AA0045757B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 044647BA1CEDA9AA0045757B /* main.m */; };
 		044647BE1CEDA9AA0045757B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044647BD1CEDA9AA0045757B /* AppDelegate.m */; };
-		044647C11CEDA9AA0045757B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044647C01CEDA9AA0045757B /* ViewController.m */; };
 		044647C41CEDA9AA0045757B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044647C21CEDA9AA0045757B /* Main.storyboard */; };
 		044647C61CEDA9AA0045757B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044647C51CEDA9AA0045757B /* Assets.xcassets */; };
 		044647C91CEDA9AA0045757B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044647C71CEDA9AA0045757B /* LaunchScreen.storyboard */; };
@@ -35,12 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401D5901CEEABE600D36DDD /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		0401D5911CEEABE600D36DDD /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		0401D5931CEEAD5500D36DDD /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		0401D5941CEEAD5500D36DDD /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		04028C931CEE461300A7383C /* YTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAnimation.h; sourceTree = "<group>"; };
+		04028C941CEE461300A7383C /* YTAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAnimation.m; sourceTree = "<group>"; };
 		044647B61CEDA9AA0045757B /* CollectionViewCell-Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CollectionViewCell-Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044647BA1CEDA9AA0045757B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		044647BC1CEDA9AA0045757B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		044647BD1CEDA9AA0045757B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		044647BF1CEDA9AA0045757B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		044647C01CEDA9AA0045757B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		044647C31CEDA9AA0045757B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044647C51CEDA9AA0045757B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044647C81CEDA9AA0045757B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,10 +107,14 @@
 		044647B81CEDA9AA0045757B /* CollectionViewCell-Animation */ = {
 			isa = PBXGroup;
 			children = (
+				04028C931CEE461300A7383C /* YTAnimation.h */,
+				04028C941CEE461300A7383C /* YTAnimation.m */,
+				0401D5931CEEAD5500D36DDD /* Cell.h */,
+				0401D5941CEEAD5500D36DDD /* Cell.m */,
+				0401D5901CEEABE600D36DDD /* CollectionViewController.h */,
+				0401D5911CEEABE600D36DDD /* CollectionViewController.m */,
 				044647BC1CEDA9AA0045757B /* AppDelegate.h */,
 				044647BD1CEDA9AA0045757B /* AppDelegate.m */,
-				044647BF1CEDA9AA0045757B /* ViewController.h */,
-				044647C01CEDA9AA0045757B /* ViewController.m */,
 				044647C21CEDA9AA0045757B /* Main.storyboard */,
 				044647C51CEDA9AA0045757B /* Assets.xcassets */,
 				044647C71CEDA9AA0045757B /* LaunchScreen.storyboard */,
@@ -270,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044647C11CEDA9AA0045757B /* ViewController.m in Sources */,
 				044647BE1CEDA9AA0045757B /* AppDelegate.m in Sources */,
+				0401D5951CEEAD5500D36DDD /* Cell.m in Sources */,
 				044647BB1CEDA9AA0045757B /* main.m in Sources */,
+				0401D5921CEEABE600D36DDD /* CollectionViewController.m in Sources */,
+				04028C951CEE461300A7383C /* YTAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +508,7 @@
 				044647E51CEDA9AA0045757B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		044647E61CEDA9AA0045757B /* Build configuration list for PBXNativeTarget "CollectionViewCell-AnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +517,7 @@
 				044647E81CEDA9AA0045757B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		044647E91CEDA9AA0045757B /* Build configuration list for PBXNativeTarget "CollectionViewCell-AnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +526,7 @@
 				044647EB1CEDA9AA0045757B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
