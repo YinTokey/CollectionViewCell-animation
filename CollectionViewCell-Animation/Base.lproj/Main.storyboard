@@ -26,12 +26,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fM-bb-Q5Q">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fM-bb-Q5Q">
                                             <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0fM-bb-Q5Q" secondAttribute="bottom" id="brt-Zm-nFZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0fM-bb-Q5Q" secondAttribute="trailing" id="eqW-V2-PjB"/>
+                                    <constraint firstItem="0fM-bb-Q5Q" firstAttribute="top" secondItem="QUg-Kn-tD4" secondAttribute="top" id="u1t-FV-99T"/>
+                                    <constraint firstItem="0fM-bb-Q5Q" firstAttribute="leading" secondItem="QUg-Kn-tD4" secondAttribute="leading" id="z2m-k0-unc"/>
+                                </constraints>
                                 <size key="customSize" width="145" height="145"/>
                                 <connections>
                                     <outlet property="imgView" destination="0fM-bb-Q5Q" id="vvN-VC-Xer"/>
@@ -43,11 +49,17 @@
                             <outlet property="delegate" destination="clZ-EW-ayB" id="FfP-70-KfR"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="vct-eZ-MHH">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="xFX-5e-8lD"/>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpN-en-olD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="114"/>
+            <point key="canvasLocation" x="312" y="65"/>
         </scene>
     </scenes>
 </document>

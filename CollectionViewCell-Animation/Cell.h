@@ -15,17 +15,13 @@
 -(void)hideAllDeleteBtn;
 @end
 
-
-
 @interface Cell : UICollectionViewCell
 
-
-
-@property (nonatomic,weak) id<CellDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
+
+
 @property (nonatomic,strong) UIButton *deleteBtn;
 @property (nonatomic,strong)NSIndexPath *indexPath;
-
-- (void)toTrashAnimation:(UIView *)itemView trashView:(UIView *)TrashView;
+@property (nonatomic,weak) id<CellDelegate>delegate;
 
 @end
