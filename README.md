@@ -6,6 +6,40 @@
 ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/19/1791475342016052119424909_640.jpg?300x530_110)  ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/19/17914753420160521194312075_640.jpg?306x552_110)
 ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/19/17914753420160521194327083_640.jpg?310x558_110) ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/20/17914753420160521202010073_640.jpg?312x554_110)
 
+What is it?
+
+Delete UICollectionView with Animations.I used CoreAnimation to realize its function.You can use it with one parame : View(or other controls inherited from UIView).
+
+How to operate this demo?
+
+Long press cells,until cells  vibrate,click the delete button then you can delete the cell what you want.Double click screen can make all cell to normal status.
+
+How to add it into your project?
+
+1.Drag YTAnimation.h, YTAnimation.m to your project.It is a tool class.
+
+2.Copy those codes to your cell   .h file.
+
+![](http://img.blog.csdn.net/20160521192508379)
+
+3.Copy my codes in Cell.m to your cell  .m file,you should pay attention to the following picture.
+
+![](http://img.blog.csdn.net/20160521192533907)
+
+4.Add those codes to your CollectionViewController
+
+![](http://img.blog.csdn.net/20160521192626299)
+   
+![](http://img.blog.csdn.net/20160521192803083)
+
+5.Most important,if you  call the method  ［YTAnimation toMiniAnimation:cell］  ,you have to comment the code   cell.imgView.image = nil; cell.deleteBtn.hidden = YES; If your cell contains other controls, comment them as well.
+
+![](http://image18-c.poco.cn/mypoco/myphoto/20160522/15/17914753420160522151006077_640.jpg?624x449_130)
+
+6.Copy~ Paste
+
+![](http://img.blog.csdn.net/20160521193028053)
+
 概述
 
 使用了核心动画里的转场动画和动画组来实现，并将这些动画封装成类，直接调用类方法，参数是被加入动画的那个view（或UIView的子类），就可以实现指定view的动画了。本篇的view指的都是UICollectionViewCell。
