@@ -57,7 +57,7 @@ Long press cells,until cells  vibrate,click the delete button then you can delet
   
    4.UICollectionView控制器里： 加入如图画圈部分 （注：我这里的控制器直接使用UICollectionViewController, 而不是在UIViewController里拖入 UICollectionView控件）。 
    
-   ![](http://img.blog.csdn.net/20160523154856411)
+![](http://img.blog.csdn.net/20160523154856411)
    
    至于那个sourceArr是我的数据源，你需要用你自己的数据源去处理。那两个BOOL变量是用来使cell长按抖动和左上角出现叉叉按钮用的。
  
