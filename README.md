@@ -74,4 +74,6 @@ Long press cells,until cells  vibrate,click the delete button then you can delet
  
    7.最后，这4个方法，直接复制黏贴就好了。
    
+   如果对你有帮助，点个star吧～
+   
    ![](http://img.blog.csdn.net/20160521193028053)
