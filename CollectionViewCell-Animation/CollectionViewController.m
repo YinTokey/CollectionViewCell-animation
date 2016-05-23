@@ -12,7 +12,8 @@
 @interface CollectionViewController ()
 {
     BOOL deleteBtnFlag;
-    BOOL rotateAniFlag;
+    BOOL vibrateAniFlag;
+    
     NSMutableArray *sourceArr;
 }
 
@@ -26,11 +27,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    deleteBtnFlag = YES;
-    rotateAniFlag = YES;
-    [self addDoubleTapGesture];
+    
+
+    [self setFlagAndGsr];
+    
+    //Data source and background
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    //Data source
     sourceArr = [NSMutableArray arrayWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
 }
 
@@ -47,83 +49,69 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    cell.indexPath = indexPath;
-    cell.deleteBtn.hidden = deleteBtnFlag?YES:NO;
-    if (!rotateAniFlag) {
-        [YTAnimation vibrateAnimation:cell];
-    }else{
-        [cell.layer removeAnimationForKey:@"shake"];
-    }
-    cell.delegate = self;
-    
-    
     //configure your cell
     NSString *imgString = sourceArr[indexPath.row];
     cell.imgView.image = [UIImage imageNamed:imgString];
+
+   
+
+    //add this method implementation in your  "cellForItemAtIndexPath"
+    [self setCellVibrate:cell IndexPath:indexPath];
+    
+    
+
     return cell;
 }
 
 
 -(void)deleteCellAtIndexpath:(NSIndexPath *)indexPath cellView:(Cell *)cell
 {
-    if (sourceArr.count == 0) {
-        return;
-    }
-    
+   
     [self.collectionView performBatchUpdates:^{
-
-        cell.imgView.image = nil;
-        cell.deleteBtn.hidden = YES;
         
-        [YTAnimation fadeAnimation:cell];
-
-        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ULL * NSEC_PER_SEC);
-        dispatch_after(time, dispatch_get_main_queue(), ^{
-            
-            //延时1s执行。下面这两行执行删除cell的操作，包括移除数据源和删除item，如果你用到数据库或Core Data,
-            //要先删掉数据库里内容，在执行移除数据源和删除item
+            //delete the cell you selected
             [sourceArr removeObjectAtIndex:indexPath.row];
             [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-            
-            
-        });
 
     } completion:^(BOOL finished) {
-        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ULL * NSEC_PER_SEC);
-        dispatch_after(time, dispatch_get_main_queue(), ^{
-            
             [self.collectionView reloadData];
-        });
-
     }];
-    
-    
 }
 
-- (void) handleDoubleTap:(UITapGestureRecognizer *) gestureRecognizer
-{
+//the following methods you just need copy ~ paste
+- (void)setFlagAndGsr{
+    deleteBtnFlag = YES;
+    vibrateAniFlag = YES;
+    [self addDoubleTapGesture];
+}
+- (void)setCellVibrate:(Cell *)cell IndexPath:(NSIndexPath *)indexPath{
+    cell.indexPath = indexPath;
+    cell.deleteBtn.hidden = deleteBtnFlag?YES:NO;
+    if (!vibrateAniFlag) {
+        [YTAnimation vibrateAnimation:cell];
+    }else{
+        [cell.layer removeAnimationForKey:@"shake"];
+    }
+    cell.delegate = self;
+}
+- (void) handleDoubleTap:(UITapGestureRecognizer *) gestureRecognizer{
     [self hideAllDeleteBtn];
 }
-
--(void)addDoubleTapGesture{
+- (void)addDoubleTapGesture{
     UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
     [doubletap setNumberOfTapsRequired:2];
     [self.view addGestureRecognizer:doubletap];
 }
-
-
--(void)hideAllDeleteBtn{
+- (void)hideAllDeleteBtn{
     if (!deleteBtnFlag) {
         deleteBtnFlag = YES;
-        rotateAniFlag = YES;
+        vibrateAniFlag = YES;
         [self.collectionView reloadData];
     }
 }
-
--(void)showAllDeleteBtn{
+- (void)showAllDeleteBtn{
     deleteBtnFlag = NO;
-    rotateAniFlag = NO;
+    vibrateAniFlag = NO;
     [self.collectionView reloadData];
 }
 
