@@ -7,7 +7,7 @@
 
 #What is it?
 
-Delete UICollectionView with Animations.I used CoreAnimation to realize its function.
+Delete UICollectionViewCell with Animations.I used CoreAnimation to realize its function.
 
 #How to operate this demo?
 
