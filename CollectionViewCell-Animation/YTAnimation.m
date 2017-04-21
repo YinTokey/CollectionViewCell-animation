@@ -115,6 +115,8 @@
     group.duration = 1.0;
     group.animations = @[rotationAni, scaleAni];
     [group setValue:@"toMini" forKey:@"animType"];
+    group.removedOnCompletion = NO;
+    group.fillMode = kCAFillModeForwards;
     [AniView.layer addAnimation:group forKey:nil];
 }
 
