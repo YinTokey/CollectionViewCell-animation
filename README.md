@@ -5,15 +5,15 @@
 ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/19/1791475342016052119424909_640.jpg?300x530_110)  ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/19/17914753420160521194312075_640.jpg?306x552_110)
 ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/19/17914753420160521194327083_640.jpg?310x558_110) ![](http://image18-c.poco.cn/mypoco/myphoto/20160521/20/17914753420160521202010073_640.jpg?312x554_110)
 
-#What is it?
+# What is it?
 
 Delete UICollectionViewCell with Animations.I used CoreAnimation to realize its function.
 
-#How to operate this demo?
+# How to operate this demo?
 
 Long press cells,until cells  vibrate,click the delete button then you can delete the cell what you want.Double click screen can make all cell to normal status.
 
-#How to add it into your project?
+# How to add it into your project?
 
 1.Drag YTAnimation.h, YTAnimation.m to your project.It is a tool class.
 
@@ -33,15 +33,15 @@ Long press cells,until cells  vibrate,click the delete button then you can delet
 
 
 
-#概述
+# 概述
 
 使用了核心动画里的转场动画和动画组来实现。
 
-#Demo操作
+# Demo操作
 
 长按cell,出现抖动状态，然后点击左上角叉叉按钮即可删除Cell。双击屏幕即可恢复到原来装态。
 
-#如何应用到自己项目中
+# 如何应用到自己项目中
 
    1.首先将YTAnimation.h , YTAnimation.m两个文件拖入你的项目中，它相当于是一个工具类。
    
